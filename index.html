@@ -182,6 +182,15 @@ nav.scrolled { padding: 14px 48px; }
   padding: 0 48px 100px;
 }
 
+/* Project title above hero image */
+.project-title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
 /* Hero image */
 .project-hero {
   width: 100%;
@@ -205,19 +214,20 @@ nav.scrolled { padding: 14px 48px; }
 
 .project-text { max-width: 640px; }
 
-.project-text h3 {
-  font-family: var(--font-display);
-  font-size: 32px;
-  font-weight: 400;
-  margin-bottom: 12px;
-}
-
 .project-text .brief {
   font-size: 15px;
   line-height: 1.7;
   color: var(--text-mid);
   font-weight: 300;
+  margin-bottom: 16px;
+}
+
+.project-text .read-more {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
   margin-bottom: 60px;
+  display: block;
 }
 
 .project-stats {
@@ -418,13 +428,14 @@ footer {
 
 <!-- ─── 01 · MFH Taferner ─── -->
 <article class="project reveal">
+  <h3 class="project-title">Multifamily House Erding</h3>
   <div class="project-hero">
     <img src="images/mfh-taferner/hero.avif" alt="Multifamily House Erding exterior">
   </div>
   <div class="project-info">
     <div class="project-text">
-      <h3>Multifamily House Erding</h3>
       <p class="brief">Communal living in passive house standard designed for seniors and people with disabilities. A distinctive continuous band connects the main structure with auxiliary facilities, enclosing a sheltered garden to the north.</p>
+      <span class="read-more">Read more about the project</span>
       <div class="project-stats">
         <span class="stat"><strong>Type</strong> Residential</span>
         <span class="stat"><strong>Location</strong> Erding</span>
@@ -452,13 +463,14 @@ footer {
 
 <!-- ─── 02 · Kindergarten Gröbenzell ─── -->
 <article class="project reveal">
+  <h3 class="project-title">Kindergarten Gröbenzell</h3>
   <div class="project-hero">
     <img src="images/kindergarten-groebenzell/hero.avif" alt="Kindergarten Gröbenzell exterior">
   </div>
   <div class="project-info">
     <div class="project-text">
-      <h3>Kindergarten Gröbenzell</h3>
       <p class="brief">A bright, playful childcare center that brings daylight, outdoor play, and community together on a narrow site near Munich. The building meets passive-house standards with timber/concrete mixed construction.</p>
+      <span class="read-more">Read more about the project</span>
       <div class="project-stats">
         <span class="stat"><strong>Type</strong> Educational</span>
         <span class="stat"><strong>Location</strong> Gröbenzell</span>
@@ -492,13 +504,14 @@ footer {
 
 <!-- ─── 03 · Paul-Winter School ─── -->
 <article class="project reveal">
+  <h3 class="project-title">Paul-Winter School</h3>
   <div class="project-hero">
     <img src="images/paul-winter-school/hero.avif" alt="Paul-Winter School exterior">
   </div>
   <div class="project-info">
     <div class="project-text">
-      <h3>Paul-Winter School</h3>
       <p class="brief">Serving 600 middle school students, the campus includes a double gym, outdoor sports areas, a cafeteria, and spaces for after-school programs. Features a tilted pixel façade for sun shading and acoustic control, with decentralized facade units filtering fresh air.</p>
+      <span class="read-more">Read more about the project</span>
       <div class="project-stats">
         <span class="stat"><strong>Type</strong> Educational</span>
         <span class="stat"><strong>Year</strong> 2015 – 2021</span>
@@ -519,13 +532,13 @@ footer {
     <img src="images/paul-winter-school/interior.avif" alt="Auditorium interior">
     <img src="images/paul-winter-school/classroom.avif" alt="Classroom rendering">
     <img src="images/paul-winter-school/workshop.avif" alt="Workshop rendering">
+    <img src="images/paul-winter-school/04.avif" alt="School aerial">
   </div>
 
   <div class="media-label">Drawings</div>
   <div class="image-row">
     <a href="images/paul-winter-school/plan.avif" target="_blank" class="full-width"><img src="images/paul-winter-school/plan.avif" alt="Floor plan"></a>
     <a href="images/paul-winter-school/03.png" target="_blank"><img src="images/paul-winter-school/03.png" alt="School perspective"></a>
-    <a href="images/paul-winter-school/04.avif" target="_blank"><img src="images/paul-winter-school/04.avif" alt="School aerial"></a>
     <a href="images/paul-winter-school/detail-01.avif" target="_blank"><img src="images/paul-winter-school/detail-01.avif" alt="Construction detail"></a>
     <a href="images/paul-winter-school/detail-02.avif" target="_blank"><img src="images/paul-winter-school/detail-02.avif" alt="Construction detail"></a>
     <a href="images/paul-winter-school/detail-03.avif" target="_blank"><img src="images/paul-winter-school/detail-03.avif" alt="Construction detail"></a>
@@ -535,13 +548,14 @@ footer {
 
 <!-- ─── 04 · Villa S ─── -->
 <article class="project reveal">
+  <h3 class="project-title">Villa S</h3>
   <div class="project-hero">
     <img src="images/villa-s/06.avif" alt="Villa S living space">
   </div>
   <div class="project-info">
     <div class="project-text">
-      <h3>Villa S</h3>
       <p class="brief">A cabin-inspired villa that blends dark materials, open spaces, and strong indoor–outdoor living on the outskirts of Munich. Dark wooden façade on top of a stone base creates a luxurious yet warm and welcoming aesthetic.</p>
+      <span class="read-more">Read more about the project</span>
       <div class="project-stats">
         <span class="stat"><strong>Type</strong> Residential</span>
         <span class="stat"><strong>Location</strong> Munich</span>
@@ -573,13 +587,14 @@ footer {
 
 <!-- ─── 05 · Revitalization WEC ─── -->
 <article class="project reveal">
+  <h3 class="project-title">Revitalization Westend Carrée</h3>
   <div class="project-hero">
     <img src="images/westend-carree/hero.avif" alt="Westend Carrée exterior">
   </div>
   <div class="project-info">
     <div class="project-text">
-      <h3>Revitalization Westend Carrée</h3>
       <p class="brief">Sustainability certification, redesigned common areas, and improved outdoor facilities of a five- to eight-story office complex offering around 31,000 m² of rental space in Frankfurt's prestigious Westend.</p>
+      <span class="read-more">Read more about the project</span>
       <div class="project-stats">
         <span class="stat"><strong>Type</strong> Commercial</span>
         <span class="stat"><strong>Location</strong> Frankfurt</span>
