@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revitalization Westend Carrée — Feng Yi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --bg: #FFFFFF; --text: #1A1A1A; --text-mid: #5C5C5C; --text-light: #8A8780; --border: #D4CFC7; --font-display: 'Cormorant Garamond', Georgia, serif; --font-body: 'DM Sans', sans-serif; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { color: var(--text); }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: rgba(255,255,255,0.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.nav-logo img { height: 48px; width: auto; }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a { font-size: 13px; font-weight: 400; color: var(--text-mid); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.3s; }
+.nav-links a:hover { color: var(--text); }
+.page-header { padding: 140px 48px 0; }
+.page-header .category { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-light); margin-bottom: 16px; }
+.page-header h1 { font-family: var(--font-display); font-size: clamp(36px, 5vw, 56px); font-weight: 300; line-height: 1.15; margin-bottom: 40px; }
+.content { padding: 0 48px; max-width: 1200px; }
+.description { max-width: 720px; font-size: 16px; line-height: 1.8; color: var(--text-mid); font-weight: 300; margin-bottom: 20px; }
+.img-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 48px; }
+.img-full { margin-bottom: 48px; }
+.img-full img, .img-pair img { width: 100%; object-fit: cover; background: #f0eeea; }
+.img-full img { aspect-ratio: 16/9; }
+.img-pair img { aspect-ratio: 4/3; }
+.img-full a, .img-pair a { display: block; }
+.stats { margin-bottom: 48px; padding: 32px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.stats p { font-size: 14px; color: var(--text-mid); line-height: 2; }
+.stats strong { color: var(--text); font-weight: 500; }
+.responsibilities { margin-bottom: 48px; max-width: 720px; }
+.responsibilities h2 { font-family: var(--font-body); font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px; }
+.responsibilities p { font-size: 14px; line-height: 1.9; color: var(--text-mid); }
+.project-nav { display: flex; justify-content: space-between; align-items: center; padding: 48px 0; margin: 0 48px; border-top: 1px solid var(--border); }
+.project-nav a { font-size: 14px; color: var(--text-mid); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.3s; }
+.project-nav a:hover { color: var(--text); }
+.arrow { font-size: 20px; }
+footer { border-top: 1px solid var(--border); padding: 32px 48px; font-size: 12px; color: var(--text-light); display: flex; justify-content: space-between; align-items: center; }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { color: var(--text-mid); text-decoration: none; font-size: 12px; }
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (max-width: 768px) {
+  nav { padding: 14px 20px; }
+  .page-header, .content, .project-nav { padding-left: 20px; padding-right: 20px; }
+  .project-nav { margin: 0 20px; }
+  .img-pair { grid-template-columns: 1fr; }
+  footer { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Feng Yi"></a>
+  <ul class="nav-links">
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="mailto:ermafeng918@gmail.com">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="page-header reveal">
+  <div class="category">Architecture · Commercial</div>
+  <h1>Revitalization Westend Carrée</h1>
+</header>
+
+<div class="content">
+
+  <p class="description reveal">Sustainability certification, redesigned common areas, and improved outdoor facilities of a five- to eight-story office complex offering around 31,000 m² of rental space in Frankfurt's prestigious Westend. The main focus of the conversion lay on creating spatial clarity and enabling easy orientation, befitting the prestigious location and high tenant expectations.</p>
+
+  <p class="description reveal">What now appears effortless and simple is the result of determined work — a light-filled, open entrance area where large-format glass panels create a puristic clarity, replacing what was once an arbitrarily assembled building complex. Located on the popular Grüneburgweg, the complex combines centrality and renown into an exceptional office location.</p>
+
+  <div class="img-full reveal">
+    <a href="images/westend-carree/hero.avif" target="_blank"><img src="images/westend-carree/hero.avif" alt="Westend Carrée exterior"></a>
+  </div>
+
+  <div class="stats reveal">
+    <p><strong>Project type:</strong> Commercial</p>
+    <p><strong>Location:</strong> Frankfurt am Main</p>
+    <p><strong>Timeline:</strong> 2021 – 2022</p>
+    <p><strong>GFA:</strong> 4,670 m²</p>
+    <p><strong>Budget:</strong> €13M</p>
+    <p><strong>Role:</strong> Project Lead</p>
+  </div>
+
+  <div class="img-pair reveal">
+    <a href="images/westend-carree/01.avif" target="_blank"><img src="images/westend-carree/01.avif" alt="Lobby"></a>
+    <a href="images/westend-carree/02.avif" target="_blank"><img src="images/westend-carree/02.avif" alt="Courtyard"></a>
+  </div>
+
+  <div class="img-pair reveal">
+    <a href="images/westend-carree/03.avif" target="_blank"><img src="images/westend-carree/03.avif" alt="Facade"></a>
+    <a href="images/westend-carree/04.avif" target="_blank"><img src="images/westend-carree/04.avif" alt="Interior"></a>
+  </div>
+
+  <div class="img-full reveal">
+    <a href="images/westend-carree/05.avif" target="_blank"><img src="images/westend-carree/05.avif" alt="Detail"></a>
+  </div>
+
+  <div class="responsibilities reveal">
+    <h2>Project Scope</h2>
+    <p>The revitalization focused on achieving sustainability certification (DGNB/LEED), complete redesign of common areas including lobbies, corridors and shared facilities, improvement of outdoor facilities including courtyards and entrance zones, and modernization of building systems to meet current energy efficiency standards.</p>
+  </div>
+
+</div>
+
+<div class="project-nav">
+  <a href="project-mfh-taferner.html"><span class="arrow">←</span> MFH Taferner</a>
+  <a href="index.html">All Projects <span class="arrow">→</span></a>
+</div>
+
+<footer>
+  <span>© 2026 Feng Yi. All rights reserved.</span>
+  <div class="footer-links">
+    <a href="https://www.behance.net/yifeng11" target="_blank">Behance</a>
+    <a href="https://www.linkedin.com/in/yifeng918" target="_blank">LinkedIn</a>
+    <a href="mailto:ermafeng918@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
