@@ -13,7 +13,7 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --bg: #F5F2ED;
+  --bg: #FFFFFF;
   --text: #1A1A1A;
   --text-mid: #5C5C5C;
   --text-light: #8A8780;
@@ -46,7 +46,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 20px 48px;
-  background: rgba(245, 242, 237, 0.88);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
@@ -217,7 +217,7 @@ nav.scrolled { padding: 14px 48px; }
   line-height: 1.7;
   color: var(--text-mid);
   font-weight: 300;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 .project-stats {
@@ -273,6 +273,27 @@ nav.scrolled { padding: 14px 48px; }
 }
 .image-row img:hover {
   transform: scale(1.015);
+}
+
+/* Drawings are wrapped in links */
+.image-row a {
+  display: block;
+}
+.image-row a img {
+  cursor: zoom-in;
+}
+
+/* Full-width drawing: spans all columns, no cropping */
+.image-row .full-width {
+  grid-column: 1 / -1;
+}
+.image-row .full-width img,
+.image-row img.full-width {
+  aspect-ratio: auto;
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  background: #f4f3f0;
 }
 
 /* ═══════════════════════════════════════
@@ -420,8 +441,8 @@ footer {
 
   <div class="media-label">Drawings</div>
   <div class="image-row">
-    <img src="images/mfh-taferner/plan.avif" alt="MFH Taferner floor plan">
-    <img src="images/mfh-taferner/section.avif" alt="MFH Taferner section drawing">
+    <a href="images/mfh-taferner/plan.avif" target="_blank"><img src="images/mfh-taferner/plan.avif" alt="MFH Taferner floor plan"></a>
+    <a href="images/mfh-taferner/section.avif" target="_blank"><img src="images/mfh-taferner/section.avif" alt="MFH Taferner section drawing"></a>
   </div>
 </article>
 
@@ -454,14 +475,14 @@ footer {
 
   <div class="media-label">Drawings</div>
   <div class="image-row">
-    <img src="images/kindergarten-groebenzell/siteplan.avif" alt="Kindergarten site plan">
-    <img src="images/kindergarten-groebenzell/detail-02.avif" alt="Construction detail">
-    <img src="images/kindergarten-groebenzell/detail-03.avif" alt="Construction detail">
-    <img src="images/kindergarten-groebenzell/detail-04.avif" alt="Construction detail">
-    <img src="images/kindergarten-groebenzell/detail-05.avif" alt="Construction detail">
-    <img src="images/kindergarten-groebenzell/detail-06.avif" alt="Construction detail">
-    <img src="images/kindergarten-groebenzell/detail-07.avif" alt="Construction detail">
-    <img src="images/kindergarten-groebenzell/section.avif" alt="Section drawing">
+    <a href="images/kindergarten-groebenzell/siteplan.avif" target="_blank" class="full-width"><img src="images/kindergarten-groebenzell/siteplan.avif" alt="Kindergarten site plan"></a>
+    <a href="images/kindergarten-groebenzell/detail-02.avif" target="_blank"><img src="images/kindergarten-groebenzell/detail-02.avif" alt="Construction detail"></a>
+    <a href="images/kindergarten-groebenzell/detail-03.avif" target="_blank"><img src="images/kindergarten-groebenzell/detail-03.avif" alt="Construction detail"></a>
+    <a href="images/kindergarten-groebenzell/detail-04.avif" target="_blank"><img src="images/kindergarten-groebenzell/detail-04.avif" alt="Construction detail"></a>
+    <a href="images/kindergarten-groebenzell/detail-05.avif" target="_blank"><img src="images/kindergarten-groebenzell/detail-05.avif" alt="Construction detail"></a>
+    <a href="images/kindergarten-groebenzell/detail-06.avif" target="_blank"><img src="images/kindergarten-groebenzell/detail-06.avif" alt="Construction detail"></a>
+    <a href="images/kindergarten-groebenzell/detail-07.avif" target="_blank"><img src="images/kindergarten-groebenzell/detail-07.avif" alt="Construction detail"></a>
+    <a href="images/kindergarten-groebenzell/section.avif" target="_blank"><img src="images/kindergarten-groebenzell/section.avif" alt="Section drawing"></a>
   </div>
 </article>
 
@@ -492,26 +513,26 @@ footer {
     <img src="images/paul-winter-school/photo-02.avif" alt="School exterior photo">
     <img src="images/paul-winter-school/05.avif" alt="School view">
     <img src="images/paul-winter-school/interior.avif" alt="Auditorium interior">
+    <img src="images/paul-winter-school/classroom.avif" alt="Classroom rendering">
+    <img src="images/paul-winter-school/workshop.avif" alt="Workshop rendering">
   </div>
 
   <div class="media-label">Drawings</div>
   <div class="image-row">
-    <img src="images/paul-winter-school/classroom.avif" alt="Classroom rendering">
-    <img src="images/paul-winter-school/workshop.avif" alt="Workshop rendering">
-    <img src="images/paul-winter-school/plan.avif" alt="Floor plan">
-    <img src="images/paul-winter-school/03.png" alt="School perspective">
-    <img src="images/paul-winter-school/04.avif" alt="School aerial">
-    <img src="images/paul-winter-school/detail-01.avif" alt="Construction detail">
-    <img src="images/paul-winter-school/detail-02.avif" alt="Construction detail">
-    <img src="images/paul-winter-school/detail-03.avif" alt="Construction detail">
-    <img src="images/paul-winter-school/detail-04.avif" alt="Construction detail">
+    <a href="images/paul-winter-school/plan.avif" target="_blank" class="full-width"><img src="images/paul-winter-school/plan.avif" alt="Floor plan"></a>
+    <a href="images/paul-winter-school/03.png" target="_blank"><img src="images/paul-winter-school/03.png" alt="School perspective"></a>
+    <a href="images/paul-winter-school/04.avif" target="_blank"><img src="images/paul-winter-school/04.avif" alt="School aerial"></a>
+    <a href="images/paul-winter-school/detail-01.avif" target="_blank"><img src="images/paul-winter-school/detail-01.avif" alt="Construction detail"></a>
+    <a href="images/paul-winter-school/detail-02.avif" target="_blank"><img src="images/paul-winter-school/detail-02.avif" alt="Construction detail"></a>
+    <a href="images/paul-winter-school/detail-03.avif" target="_blank"><img src="images/paul-winter-school/detail-03.avif" alt="Construction detail"></a>
+    <a href="images/paul-winter-school/detail-04.avif" target="_blank"><img src="images/paul-winter-school/detail-04.avif" alt="Construction detail"></a>
   </div>
 </article>
 
 <!-- ─── 04 · Villa S ─── -->
 <article class="project reveal">
   <div class="project-hero">
-    <img src="images/villa-s/hero.avif" alt="Villa S exterior">
+    <img src="images/villa-s/02.avif" alt="Villa S side view">
   </div>
   <div class="project-info">
     <div class="project-text">
@@ -531,8 +552,8 @@ footer {
 
   <div class="media-label">Photography</div>
   <div class="image-row">
+    <img src="images/villa-s/hero.avif" alt="Villa S exterior">
     <img src="images/villa-s/01.avif" alt="Villa S front view">
-    <img src="images/villa-s/02.avif" alt="Villa S side view">
     <img src="images/villa-s/03.avif" alt="Villa S detail">
     <img src="images/villa-s/04.avif" alt="Villa S interior">
     <img src="images/villa-s/06.avif" alt="Villa S living space">
@@ -542,7 +563,7 @@ footer {
 
   <div class="media-label">Drawings</div>
   <div class="image-row">
-    <img src="images/villa-s/plan.avif" alt="Villa S floor plan">
+    <a href="images/villa-s/plan.avif" target="_blank"><img src="images/villa-s/plan.avif" alt="Villa S floor plan"></a>
   </div>
 </article>
 
