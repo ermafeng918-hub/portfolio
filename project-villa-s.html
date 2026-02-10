@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Villa S — Feng Yi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --bg: #FFFFFF; --text: #1A1A1A; --text-mid: #5C5C5C; --text-light: #8A8780; --border: #D4CFC7; --font-display: 'Cormorant Garamond', Georgia, serif; --font-body: 'DM Sans', sans-serif; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { color: var(--text); }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: rgba(255,255,255,0.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.nav-logo img { height: 48px; width: auto; }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a { font-size: 13px; font-weight: 400; color: var(--text-mid); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.3s; }
+.nav-links a:hover { color: var(--text); }
+.page-header { padding: 140px 48px 0; }
+.page-header .category { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-light); margin-bottom: 16px; }
+.page-header h1 { font-family: var(--font-display); font-size: clamp(36px, 5vw, 56px); font-weight: 300; line-height: 1.15; margin-bottom: 40px; }
+.content { padding: 0 48px; max-width: 1200px; }
+.description { max-width: 720px; font-size: 16px; line-height: 1.8; color: var(--text-mid); font-weight: 300; margin-bottom: 20px; }
+.ext-link { display: inline-block; font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 48px; text-decoration: underline; text-underline-offset: 4px; }
+.img-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 48px; }
+.img-full { margin-bottom: 48px; }
+.img-full img, .img-pair img { width: 100%; object-fit: cover; background: #f0eeea; }
+.img-full img { aspect-ratio: auto; }
+.img-pair img { aspect-ratio: 4/3; }
+.img-full a, .img-pair a { display: block; }
+.stats { margin-bottom: 48px; padding: 32px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.stats p { font-size: 14px; color: var(--text-mid); line-height: 2; }
+.stats strong { color: var(--text); font-weight: 500; }
+.responsibilities { margin-bottom: 48px; max-width: 720px; }
+.responsibilities h2 { font-family: var(--font-body); font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px; }
+.responsibilities ul { list-style: none; padding: 0; }
+.responsibilities li { font-size: 14px; line-height: 1.9; color: var(--text-mid); padding-left: 16px; position: relative; }
+.responsibilities li::before { content: '·'; position: absolute; left: 0; color: var(--border); font-weight: 700; }
+.design-features { margin-bottom: 48px; max-width: 720px; }
+.design-features h2 { font-family: var(--font-body); font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px; }
+.design-features ul { list-style: none; padding: 0; }
+.design-features li { font-size: 14px; line-height: 1.9; color: var(--text-mid); padding-left: 16px; position: relative; }
+.design-features li::before { content: '·'; position: absolute; left: 0; color: var(--border); font-weight: 700; }
+.design-features a { color: var(--text-mid); }
+.project-nav { display: flex; justify-content: space-between; align-items: center; padding: 48px 0; margin: 0 48px; border-top: 1px solid var(--border); }
+.project-nav a { font-size: 14px; color: var(--text-mid); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.3s; }
+.project-nav a:hover { color: var(--text); }
+.arrow { font-size: 20px; }
+footer { border-top: 1px solid var(--border); padding: 32px 48px; font-size: 12px; color: var(--text-light); display: flex; justify-content: space-between; align-items: center; }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { color: var(--text-mid); text-decoration: none; font-size: 12px; }
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (max-width: 768px) {
+  nav { padding: 14px 20px; }
+  .page-header, .content, .project-nav { padding-left: 20px; padding-right: 20px; }
+  .project-nav { margin: 0 20px; }
+  .img-pair { grid-template-columns: 1fr; }
+  footer { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Feng Yi"></a>
+  <ul class="nav-links">
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="mailto:ermafeng918@gmail.com">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="page-header reveal">
+  <div class="category">Architecture · Residential</div>
+  <h1>Villa S</h1>
+</header>
+
+<div class="content">
+
+  <p class="description reveal">Located on the outskirts of Munich, Villa S combines a dark wooden façade on top of a stone base. This gives the villa a cabin character. Large windows promise spaciousness and elegance. The set-back upper floor creates wide south terraces. The gabled roof transitions into a glass canopy that protects the outdoor seating area. The bedroom opens directly onto an outdoor lounge and pool, creating extra attractive outdoor spaces.</p>
+
+  <p class="description reveal">A curved steel staircase leads to the living and kitchen area. The steel and glass room above the kitchen is a special feature. Dark materials define the building—black steel, dark wood floors, and black natural stone in the bathrooms. Balanced by white walls, the design feels luxurious yet warm and welcoming.</p>
+
+  <a href="https://www.lsa-architekten.de/projekte/villa-s/" target="_blank" class="ext-link reveal">Read more about this project ↗</a>
+
+  <div class="img-pair reveal">
+    <img src="images/villa-s/03.avif" alt="Villa S detail">
+    <img src="images/villa-s/02.avif" alt="Villa S side view">
+  </div>
+
+  <div class="stats reveal">
+    <p><strong>Project type:</strong> Residential</p>
+    <p><strong>Timeline:</strong> 2017 – 2020</p>
+    <p><strong>Completion:</strong> 2020</p>
+    <p><strong>NFA:</strong> 1,670 sf · 155 m²</p>
+    <p><strong>GFA:</strong> 4,844 sf · 450 m²</p>
+    <p><strong>Team:</strong> 2–3 architects</p>
+    <p><strong>Role:</strong> Project lead after CD phase and site manager</p>
+    <p><strong>Cost:</strong> $2.27M · €2M</p>
+  </div>
+
+  <div class="img-full reveal">
+    <img src="images/villa-s/hero.avif" alt="Villa S exterior">
+  </div>
+
+  <div class="img-full reveal">
+    <a href="images/villa-s/plan.avif" target="_blank"><img src="images/villa-s/plan.avif" alt="Villa S floor plan"></a>
+  </div>
+
+  <div class="responsibilities reveal">
+    <h2>Main Responsibilities</h2>
+    <ul>
+      <li>Client communication in the construction phase</li>
+      <li>Application and research for government subsidies / incentives</li>
+      <li>Construction Documents (technical details, construction drawings)</li>
+      <li>Interior design (kitchen design, cabinets and wellness area)</li>
+      <li>Coordination with City for permitting process (landscaping)</li>
+      <li>Cost estimation according to DIN 276 and cost tracking</li>
+      <li>Oversight of construction site — site management</li>
+      <li>3D models in Design PH</li>
+      <li>Pre- and post-handover punch list work</li>
+    </ul>
+  </div>
+
+  <div class="img-pair reveal">
+    <img src="images/villa-s/04.avif" alt="Villa S interior">
+    <img src="images/villa-s/06.avif" alt="Villa S living space">
+  </div>
+
+  <div class="design-features reveal">
+    <h2>Design Highlights</h2>
+    <ul>
+      <li>Free swinging steel staircase by METALLART Treppen GmbH</li>
+      <li>Master bathroom with integrated sauna and shower area</li>
+      <li>Liquid metal kitchen cabinet surface (<a href="https://www.hansuebelacker.de/en/materials-techniques/" target="_blank">more information ↗</a>)</li>
+      <li>Fireplace with stone mask</li>
+      <li>Stone stairs integrated into the terrain connecting pool to sundeck</li>
+    </ul>
+  </div>
+
+  <div class="img-pair reveal">
+    <img src="images/villa-s/01.avif" alt="Villa S front view">
+    <img src="images/villa-s/detail-01.avif" alt="Villa S staircase">
+  </div>
+
+  <div class="img-full reveal">
+    <img src="images/villa-s/detail-02.avif" alt="Villa S materials">
+  </div>
+
+</div>
+
+<div class="project-nav">
+  <a href="project-paul-winter-school.html"><span class="arrow">←</span> Paul-Winter School</a>
+  <a href="project-mfh-taferner.html">MFH Taferner <span class="arrow">→</span></a>
+</div>
+
+<footer>
+  <span>© 2026 Feng Yi. All rights reserved.</span>
+  <div class="footer-links">
+    <a href="https://www.behance.net/yifeng11" target="_blank">Behance</a>
+    <a href="https://www.linkedin.com/in/yifeng918" target="_blank">LinkedIn</a>
+    <a href="mailto:ermafeng918@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
