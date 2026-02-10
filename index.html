@@ -45,14 +45,14 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 48px;
+  padding: 20px 228px;
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
   transition: padding 0.3s ease;
 }
-nav.scrolled { padding: 14px 48px; }
+nav.scrolled { padding: 14px 228px; }
 
 /*  ✅ CHANGE 1 — Logo enlarged to 48px  */
 .nav-logo img {
@@ -155,7 +155,7 @@ nav.scrolled { padding: 14px 48px; }
    SECTION HEADINGS
    ═══════════════════════════════════════ */
 .section-head {
-  padding: 80px 48px 40px;
+  padding: 80px 228px 40px;
 }
 .section-head h2 {
   font-family: var(--font-body);
@@ -189,18 +189,29 @@ nav.scrolled { padding: 14px 48px; }
   font-weight: 400;
   margin-bottom: 20px;
   color: var(--text);
+  padding: 0 180px;
 }
 
-/* Hero image */
+/* Hero image — inset with padding */
 .project-hero {
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   margin-bottom: 32px;
+  padding: 0 180px;
+}
+.project-hero a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .project-hero img {
   width: 100%; height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.project-hero a:hover img {
+  transform: scale(1.02);
 }
 
 /* Info bar: title + brief + stats on left, number on right */
@@ -210,6 +221,7 @@ nav.scrolled { padding: 14px 48px; }
   align-items: flex-start;
   gap: 40px;
   margin-bottom: 36px;
+  padding: 0 180px;
 }
 
 .project-text { max-width: 640px; }
@@ -249,15 +261,16 @@ nav.scrolled { padding: 14px 48px; }
   margin-right: 6px;
 }
 
-/*  ✅ CHANGE 4 — Project number at bottom, separated from brief  */
+/*  Project number — under title, above hero */
 .project-number {
   font-family: var(--font-display);
   font-size: 64px;
   font-weight: 300;
   color: var(--border);
   line-height: 1;
-  flex-shrink: 0;
-  align-self: flex-start;
+  padding: 0 180px;
+  margin-bottom: 20px;
+  text-align: right;
 }
 
 /*  ✅ CHANGE 3 — Separate rows for Photos and Drawings  */
@@ -314,7 +327,7 @@ nav.scrolled { padding: 14px 48px; }
    ABOUT / FOOTER
    ═══════════════════════════════════════ */
 .about {
-  padding: 80px 48px;
+  padding: 80px 228px;
   border-top: 1px solid var(--border);
   margin-left: 0;
   margin-right: 0;
@@ -385,9 +398,13 @@ footer {
   .nav-links { gap: 20px; }
   .nav-links a { font-size: 11px; }
   .hero { padding: 120px 20px 80px; }
-  .section-head, .project, .about { padding-left: 20px; padding-right: 20px; }
-  .project-info { flex-direction: column-reverse; gap: 12px; }
+  .section-head, .about { padding-left: 20px; padding-right: 20px; }
+  .project { padding-left: 20px; padding-right: 20px; }
+  .project-info { flex-direction: column-reverse; gap: 12px; padding: 0; }
   .project-number { font-size: 40px; }
+  .project-hero { padding: 0; }
+  .project-title { padding: 0; }
+  .project-number { padding: 0; font-size: 40px; }
   .image-row { grid-template-columns: 1fr 1fr; }
   footer { padding: 24px 20px; flex-direction: column; gap: 12px; }
 }
@@ -430,46 +447,58 @@ footer {
 <!-- ── Section: Projects ── -->
 <div class="section-head reveal"><h2>Selected Works</h2></div>
 
-<!-- ─── 01 · MFH Taferner ─── -->
+<!-- ─── 01 · Paul-Winter School ─── -->
 <article class="project reveal">
-  <h3 class="project-title">Multifamily House Erding</h3>
+  <h3 class="project-title">Paul-Winter School</h3>
+  <div class="project-number">01</div>
   <div class="project-hero">
-    <img src="images/mfh-taferner/hero.avif" alt="Multifamily House Erding exterior">
+    <a href="project-paul-winter-school.html"><img src="images/paul-winter-school/hero.avif" alt="Paul-Winter School exterior"></a>
   </div>
   <div class="project-info">
     <div class="project-text">
-      <p class="brief">Communal living in passive house standard designed for seniors and people with disabilities. A distinctive continuous band connects the main structure with auxiliary facilities, enclosing a sheltered garden to the north.</p>
-      <a href="project-mfh-taferner.html" class="read-more">Read more about the project →</a>
+      <p class="brief">Serving 600 middle school students, the campus includes a double gym, outdoor sports areas, a cafeteria, and spaces for after-school programs. Features a tilted pixel façade for sun shading and acoustic control, with decentralized facade units filtering fresh air.</p>
+      <a href="project-paul-winter-school.html" class="read-more">Read more about the project →</a>
       <div class="project-stats">
-        <span class="stat"><strong>Type</strong> Residential</span>
-        <span class="stat"><strong>Location</strong> Erding</span>
-        <span class="stat"><strong>Year</strong> 2015 – 2017</span>
-        <span class="stat"><strong>GFA</strong> 346 m²</span>
-        <span class="stat"><strong>Role</strong> Project Lead</span>
+        <span class="stat"><strong>Type</strong> Educational</span>
+        <span class="stat"><strong>Year</strong> 2015 – 2021</span>
+        <span class="stat"><strong>GFA</strong> 13,293 m²</span>
+        <span class="stat"><strong>Budget</strong> €35.5M</span>
+        <span class="stat"><strong>Team</strong> 3 Architects + 2 Site Managers</span>
+        <span class="stat"><strong>Role</strong> Project Architect</span>
       </div>
     </div>
-    <div class="project-number">01</div>
-  </div>
-
-  <div class="media-label">Photography</div>
-  <div class="image-row">
-    <img src="images/mfh-taferner/02.avif" alt="MFH Taferner view">
-    <img src="images/mfh-taferner/04.avif" alt="MFH Taferner detail">
-    <img src="images/mfh-taferner/05.avif" alt="MFH Taferner garden">
-  </div>
-
-  <div class="media-label">Drawings</div>
-  <div class="image-row">
-    <a href="images/mfh-taferner/plan.avif" target="_blank"><img src="images/mfh-taferner/plan.avif" alt="MFH Taferner floor plan"></a>
-    <a href="images/mfh-taferner/section.avif" target="_blank"><img src="images/mfh-taferner/section.avif" alt="MFH Taferner section drawing"></a>
   </div>
 </article>
 
-<!-- ─── 02 · Kindergarten Gröbenzell ─── -->
+<!-- ─── 02 · Villa S ─── -->
+<article class="project reveal">
+  <h3 class="project-title">Villa S</h3>
+  <div class="project-number">02</div>
+  <div class="project-hero">
+    <a href="project-villa-s.html"><img src="images/villa-s/06.avif" alt="Villa S living space"></a>
+  </div>
+  <div class="project-info">
+    <div class="project-text">
+      <p class="brief">A cabin-inspired villa that blends dark materials, open spaces, and strong indoor–outdoor living on the outskirts of Munich. Dark wooden façade on top of a stone base creates a luxurious yet warm and welcoming aesthetic.</p>
+      <a href="project-villa-s.html" class="read-more">Read more about the project →</a>
+      <div class="project-stats">
+        <span class="stat"><strong>Type</strong> Residential</span>
+        <span class="stat"><strong>Location</strong> Munich</span>
+        <span class="stat"><strong>Year</strong> 2017 – 2020</span>
+        <span class="stat"><strong>GFA</strong> 450 m²</span>
+        <span class="stat"><strong>Budget</strong> €2M</span>
+        <span class="stat"><strong>Role</strong> Project Lead & Site Manager</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- ─── 03 · Kindergarten Gröbenzell ─── -->
 <article class="project reveal">
   <h3 class="project-title">Kindergarten Gröbenzell</h3>
+  <div class="project-number">03</div>
   <div class="project-hero">
-    <img src="images/kindergarten-groebenzell/hero.avif" alt="Kindergarten Gröbenzell exterior">
+    <a href="project-kindergarten-groebenzell.html"><img src="images/kindergarten-groebenzell/hero.avif" alt="Kindergarten Gröbenzell exterior"></a>
   </div>
   <div class="project-info">
     <div class="project-text">
@@ -485,115 +514,37 @@ footer {
         <span class="stat"><strong>Certification</strong> Passivhaus 2014</span>
       </div>
     </div>
-    <div class="project-number">02</div>
-  </div>
-
-  <div class="media-label">Photography</div>
-  <div class="image-row">
-    <img src="images/kindergarten-groebenzell/03.avif" alt="Kindergarten interior">
-  </div>
-
-  <div class="media-label">Drawings</div>
-  <div class="image-row">
-    <a href="images/kindergarten-groebenzell/siteplan.avif" target="_blank" class="full-width"><img src="images/kindergarten-groebenzell/siteplan.avif" alt="Kindergarten site plan"></a>
-    <a href="images/kindergarten-groebenzell/detail-02.avif" target="_blank"><img src="images/kindergarten-groebenzell/detail-02.avif" alt="Construction detail"></a>
-    <a href="images/kindergarten-groebenzell/detail-03.avif" target="_blank"><img src="images/kindergarten-groebenzell/detail-03.avif" alt="Construction detail"></a>
-    <a href="images/kindergarten-groebenzell/detail-04.avif" target="_blank"><img src="images/kindergarten-groebenzell/detail-04.avif" alt="Construction detail"></a>
-    <a href="images/kindergarten-groebenzell/detail-05.avif" target="_blank"><img src="images/kindergarten-groebenzell/detail-05.avif" alt="Construction detail"></a>
-    <a href="images/kindergarten-groebenzell/detail-06.avif" target="_blank"><img src="images/kindergarten-groebenzell/detail-06.avif" alt="Construction detail"></a>
-    <a href="images/kindergarten-groebenzell/detail-07.avif" target="_blank"><img src="images/kindergarten-groebenzell/detail-07.avif" alt="Construction detail"></a>
-    <a href="images/kindergarten-groebenzell/section.avif" target="_blank"><img src="images/kindergarten-groebenzell/section.avif" alt="Section drawing"></a>
   </div>
 </article>
 
-<!-- ─── 03 · Paul-Winter School ─── -->
+<!-- ─── 04 · Multifamily House Erding ─── -->
 <article class="project reveal">
-  <h3 class="project-title">Paul-Winter School</h3>
+  <h3 class="project-title">Multifamily House Erding</h3>
+  <div class="project-number">04</div>
   <div class="project-hero">
-    <img src="images/paul-winter-school/hero.avif" alt="Paul-Winter School exterior">
+    <a href="project-mfh-taferner.html"><img src="images/mfh-taferner/hero.avif" alt="Multifamily House Erding exterior"></a>
   </div>
   <div class="project-info">
     <div class="project-text">
-      <p class="brief">Serving 600 middle school students, the campus includes a double gym, outdoor sports areas, a cafeteria, and spaces for after-school programs. Features a tilted pixel façade for sun shading and acoustic control, with decentralized facade units filtering fresh air.</p>
-      <a href="project-paul-winter-school.html" class="read-more">Read more about the project →</a>
-      <div class="project-stats">
-        <span class="stat"><strong>Type</strong> Educational</span>
-        <span class="stat"><strong>Year</strong> 2015 – 2021</span>
-        <span class="stat"><strong>GFA</strong> 13,293 m²</span>
-        <span class="stat"><strong>Budget</strong> €35.5M</span>
-        <span class="stat"><strong>Team</strong> 3 Architects + 2 Site Managers</span>
-        <span class="stat"><strong>Role</strong> Project Architect</span>
-      </div>
-    </div>
-    <div class="project-number">03</div>
-  </div>
-
-  <div class="media-label">Photography</div>
-  <div class="image-row">
-    <img src="images/paul-winter-school/photo-01.avif" alt="School exterior photo">
-    <img src="images/paul-winter-school/photo-02.avif" alt="School exterior photo">
-    <img src="images/paul-winter-school/05.avif" alt="School view">
-    <img src="images/paul-winter-school/interior.avif" alt="Auditorium interior">
-    <img src="images/paul-winter-school/classroom.avif" alt="Classroom rendering">
-    <img src="images/paul-winter-school/workshop.avif" alt="Workshop rendering">
-    <img src="images/paul-winter-school/04.avif" alt="School aerial">
-  </div>
-
-  <div class="media-label">Drawings</div>
-  <div class="image-row">
-    <a href="images/paul-winter-school/plan.avif" target="_blank" class="full-width"><img src="images/paul-winter-school/plan.avif" alt="Floor plan"></a>
-    <a href="images/paul-winter-school/03.png" target="_blank"><img src="images/paul-winter-school/03.png" alt="School perspective"></a>
-    <a href="images/paul-winter-school/detail-01.avif" target="_blank"><img src="images/paul-winter-school/detail-01.avif" alt="Construction detail"></a>
-    <a href="images/paul-winter-school/detail-02.avif" target="_blank"><img src="images/paul-winter-school/detail-02.avif" alt="Construction detail"></a>
-    <a href="images/paul-winter-school/detail-03.avif" target="_blank"><img src="images/paul-winter-school/detail-03.avif" alt="Construction detail"></a>
-    <a href="images/paul-winter-school/detail-04.avif" target="_blank"><img src="images/paul-winter-school/detail-04.avif" alt="Construction detail"></a>
-  </div>
-</article>
-
-<!-- ─── 04 · Villa S ─── -->
-<article class="project reveal">
-  <h3 class="project-title">Villa S</h3>
-  <div class="project-hero">
-    <img src="images/villa-s/06.avif" alt="Villa S living space">
-  </div>
-  <div class="project-info">
-    <div class="project-text">
-      <p class="brief">A cabin-inspired villa that blends dark materials, open spaces, and strong indoor–outdoor living on the outskirts of Munich. Dark wooden façade on top of a stone base creates a luxurious yet warm and welcoming aesthetic.</p>
-      <a href="project-villa-s.html" class="read-more">Read more about the project →</a>
+      <p class="brief">Communal living in passive house standard designed for seniors and people with disabilities. A distinctive continuous band connects the main structure with auxiliary facilities, enclosing a sheltered garden to the north.</p>
+      <a href="project-mfh-taferner.html" class="read-more">Read more about the project →</a>
       <div class="project-stats">
         <span class="stat"><strong>Type</strong> Residential</span>
-        <span class="stat"><strong>Location</strong> Munich</span>
-        <span class="stat"><strong>Year</strong> 2017 – 2020</span>
-        <span class="stat"><strong>GFA</strong> 450 m²</span>
-        <span class="stat"><strong>Budget</strong> €2M</span>
-        <span class="stat"><strong>Role</strong> Project Lead & Site Manager</span>
+        <span class="stat"><strong>Location</strong> Erding</span>
+        <span class="stat"><strong>Year</strong> 2015 – 2017</span>
+        <span class="stat"><strong>GFA</strong> 346 m²</span>
+        <span class="stat"><strong>Role</strong> Project Lead</span>
       </div>
     </div>
-    <div class="project-number">04</div>
-  </div>
-
-  <div class="media-label">Photography</div>
-  <div class="image-row">
-    <img src="images/villa-s/hero.avif" alt="Villa S exterior">
-    <img src="images/villa-s/01.avif" alt="Villa S front view">
-    <img src="images/villa-s/03.avif" alt="Villa S detail">
-    <img src="images/villa-s/04.avif" alt="Villa S interior">
-    <img src="images/villa-s/02.avif" alt="Villa S side view">
-    <img src="images/villa-s/detail-01.avif" alt="Villa S staircase">
-    <img src="images/villa-s/detail-02.avif" alt="Villa S materials">
-  </div>
-
-  <div class="media-label">Drawings</div>
-  <div class="image-row">
-    <a href="images/villa-s/plan.avif" target="_blank" class="full-width"><img src="images/villa-s/plan.avif" alt="Villa S floor plan"></a>
   </div>
 </article>
 
 <!-- ─── 05 · Revitalization WEC ─── -->
 <article class="project reveal">
   <h3 class="project-title">Revitalization Westend Carrée</h3>
+  <div class="project-number">05</div>
   <div class="project-hero">
-    <img src="images/westend-carree/hero.avif" alt="Westend Carrée exterior">
+    <a href="project-westend-carree.html"><img src="images/westend-carree/hero.avif" alt="Westend Carrée exterior"></a>
   </div>
   <div class="project-info">
     <div class="project-text">
@@ -608,16 +559,6 @@ footer {
         <span class="stat"><strong>Role</strong> Project Lead</span>
       </div>
     </div>
-    <div class="project-number">05</div>
-  </div>
-
-  <div class="media-label">Photography</div>
-  <div class="image-row">
-    <a href="images/westend-carree/01.avif" target="_blank"><img src="images/westend-carree/01.avif" alt="Westend Carree lobby"></a>
-    <a href="images/westend-carree/02.avif" target="_blank"><img src="images/westend-carree/02.avif" alt="Westend Carree courtyard"></a>
-    <a href="images/westend-carree/03.avif" target="_blank"><img src="images/westend-carree/03.avif" alt="Westend Carree facade"></a>
-    <a href="images/westend-carree/04.avif" target="_blank"><img src="images/westend-carree/04.avif" alt="Westend Carree interior"></a>
-    <a href="images/westend-carree/05.avif" target="_blank"><img src="images/westend-carree/05.avif" alt="Westend Carree detail"></a>
   </div>
 </article>
 
