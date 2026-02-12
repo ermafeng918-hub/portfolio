@@ -18,19 +18,19 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; a
 .nav-links { display: flex; gap: 32px; list-style: none; }
 .nav-links a { font-size: 13px; font-weight: 400; color: var(--text-mid); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.3s; }
 .nav-links a:hover { color: var(--text); }
-.page-header { padding: 140px 48px 0; }
+.page-header { padding: 140px 48px 0; max-width: 1200px; margin: 0 auto; }
 .page-header .category { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-light); margin-bottom: 16px; }
 .page-header h1 { font-family: var(--font-display); font-size: clamp(36px, 5vw, 56px); font-weight: 300; line-height: 1.15; margin-bottom: 40px; }
-.content { padding: 0 48px; max-width: 1200px; }
+.content { padding: 0 48px; max-width: 1200px; margin: 0 auto; }
 .description { max-width: 720px; font-size: 16px; line-height: 1.8; color: var(--text-mid); font-weight: 300; margin-bottom: 20px; }
 .ext-link { display: inline-block; font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 48px; text-decoration: underline; text-underline-offset: 4px; }
 .img-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 48px; }
 .img-triple { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 48px; }
 .img-full { margin-bottom: 48px; }
-.img-full img, .img-pair img, .img-triple img { width: 100%; object-fit: cover; background: #f0eeea; }
+.img-full img, .img-pair img, .img-triple img { width: 100%; object-fit: cover; }
 .img-full img { aspect-ratio: auto; }
 .img-pair img { aspect-ratio: 4/3; }
-.img-triple img { aspect-ratio: 4/3; }
+.img-triple img { aspect-ratio: auto; object-fit: contain; filter: grayscale(1); }
 .img-full a, .img-pair a, .img-triple a { display: block; }
 .stats { margin-bottom: 48px; padding: 32px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .stats p { font-size: 14px; color: var(--text-mid); line-height: 2; }
@@ -48,12 +48,13 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; a
 .design-features ul { list-style: none; padding: 0; margin-top: 12px; }
 .design-features li { font-size: 14px; line-height: 1.9; color: var(--text-mid); padding-left: 16px; position: relative; }
 .design-features li::before { content: '·'; position: absolute; left: 0; color: var(--border); font-weight: 700; }
+.section-label { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); margin-bottom: 20px; font-weight: 500; }
 .tools { font-size: 13px; color: var(--text-light); margin-top: 24px; margin-bottom: 48px; }
-.project-nav { display: flex; justify-content: space-between; align-items: center; padding: 48px 0; margin: 0 48px; border-top: 1px solid var(--border); }
+.project-nav { display: flex; justify-content: space-between; align-items: center; padding: 48px 48px; max-width: 1200px; margin: 0 auto; border-top: 1px solid var(--border); }
 .project-nav a { font-size: 14px; color: var(--text-mid); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.3s; }
 .project-nav a:hover { color: var(--text); }
 .arrow { font-size: 20px; }
-footer { border-top: 1px solid var(--border); padding: 32px 48px; font-size: 12px; color: var(--text-light); display: flex; justify-content: space-between; align-items: center; }
+footer { border-top: 1px solid var(--border); padding: 32px 48px; font-size: 12px; color: var(--text-light); display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
 .footer-links { display: flex; gap: 20px; }
 .footer-links a { color: var(--text-mid); text-decoration: none; font-size: 12px; }
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.65s ease, transform 0.65s ease; }
@@ -61,7 +62,7 @@ footer { border-top: 1px solid var(--border); padding: 32px 48px; font-size: 12p
 @media (max-width: 768px) {
   nav { padding: 14px 20px; }
   .page-header, .content, .project-nav { padding-left: 20px; padding-right: 20px; }
-  .project-nav { margin: 0 20px; }
+  .project-nav { margin: 0 auto; }
   .img-pair, .img-triple { grid-template-columns: 1fr; }
   footer { padding: 24px 20px; }
 }
@@ -85,15 +86,6 @@ footer { border-top: 1px solid var(--border); padding: 32px 48px; font-size: 12p
 
 <div class="content">
 
-  <p class="description reveal">Located in the outskirts of Munich this childcare center transforms a long, narrow site into a bright and playful environment for young children. Group rooms on both floors open to the southwest, filling the interior with natural light and connecting directly to outdoor play terraces and a generous garden. A set-back entrance creates a welcoming forecourt that eases traffic on the narrow residential street. Four small pavilions soften the building's presence within the neighborhood and provide additional storage space. The result is a compact, thoughtful design that balances community needs, high-quality daylight, and ample outdoor play areas.</p>
-
-  <a href="https://www.vallentin-architektur.de/projekt/kita-groebenzell/" target="_blank" class="ext-link reveal">Full project on the firm's website ↗</a>
-
-  <div class="img-pair reveal">
-    <a href="images/kindergarten-groebenzell/siteplan.avif" target="_blank"><img src="images/kindergarten-groebenzell/siteplan.avif" alt="Site plan"></a>
-    <img src="images/kindergarten-groebenzell/hero.avif" alt="Kindergarten exterior">
-  </div>
-
   <div class="stats reveal">
     <p><strong>Project type:</strong> Educational</p>
     <p><strong>Year of completion:</strong> 2015</p>
@@ -105,6 +97,20 @@ footer { border-top: 1px solid var(--border); padding: 32px 48px; font-size: 12p
     <p><strong>Role:</strong> Architect / Project lead since 2014</p>
   </div>
 
+  <p class="description reveal">Located in the outskirts of Munich this childcare center transforms a long, narrow site into a bright and playful environment for young children. Group rooms on both floors open to the southwest, filling the interior with natural light and connecting directly to outdoor play terraces and a generous garden. A set-back entrance creates a welcoming forecourt that eases traffic on the narrow residential street. Four small pavilions soften the building's presence within the neighborhood and provide additional storage space. The result is a compact, thoughtful design that balances community needs, high-quality daylight, and ample outdoor play areas.</p>
+
+  <a href="https://www.vallentin-architektur.de/projekt/kita-groebenzell/" target="_blank" class="ext-link reveal">Full project on the firm's website ↗</a>
+
+  <div class="img-full reveal">
+    <a href="images/kindergarten-groebenzell/siteplan.avif" target="_blank"><img src="images/kindergarten-groebenzell/siteplan.avif" alt="Site plan"></a>
+  </div>
+
+  <div class="img-full reveal">
+    <img src="images/kindergarten-groebenzell/hero.avif" alt="Kindergarten exterior">
+  </div>
+
+  <div class="section-label reveal">Construction Details</div>
+
   <div class="img-triple reveal">
     <a href="images/kindergarten-groebenzell/detail-02.avif" target="_blank"><img src="images/kindergarten-groebenzell/detail-02.avif" alt="Construction detail"></a>
     <a href="images/kindergarten-groebenzell/detail-03.avif" target="_blank"><img src="images/kindergarten-groebenzell/detail-03.avif" alt="Construction detail"></a>
@@ -115,6 +121,19 @@ footer { border-top: 1px solid var(--border); padding: 32px 48px; font-size: 12p
     <a href="images/kindergarten-groebenzell/detail-05.avif" target="_blank"><img src="images/kindergarten-groebenzell/detail-05.avif" alt="Construction detail"></a>
     <a href="images/kindergarten-groebenzell/detail-06.avif" target="_blank"><img src="images/kindergarten-groebenzell/detail-06.avif" alt="Construction detail"></a>
     <a href="images/kindergarten-groebenzell/detail-07.avif" target="_blank"><img src="images/kindergarten-groebenzell/detail-07.avif" alt="Construction detail"></a>
+  </div>
+
+  <div class="section-label reveal">Thermal Performance</div>
+
+  <div class="design-features reveal">
+    <ul>
+      <li>Air tightness: <strong>n50 = 0.29/h</strong> (press test value)</li>
+      <li>Annual heating demand: <strong>14 kWh/(m²a)</strong> according to PHPP</li>
+      <li>U-value: <strong>0.097 W/(m²K)</strong> exterior wall</li>
+      <li>U-value: <strong>0.06 W/(m²K)</strong> basement floor slab</li>
+      <li>U-value: <strong>0.08 W/(m²K)</strong> roof</li>
+      <li>Uw-value: <strong>0.77 W/(m²K)</strong> window frames</li>
+    </ul>
   </div>
 
   <div class="img-full reveal">
@@ -141,18 +160,14 @@ footer { border-top: 1px solid var(--border); padding: 32px 48px; font-size: 12p
 
   <div class="design-features reveal">
     <h2>Special Design Features</h2>
-    <p>Construction type: Timber / concrete mixed construction</p>
     <ul>
-      <li>Air tightness: <strong>n50 = 0.29/h</strong> (press test value)</li>
-      <li>Annual heating demand: <strong>14 kWh/(m²a)</strong> according to PHPP</li>
-      <li>U-value: <strong>0.097 W/(m²K)</strong> exterior wall</li>
-      <li>U-value: <strong>0.06 W/(m²K)</strong> basement floor slab</li>
-      <li>U-value: <strong>0.08 W/(m²K)</strong> roof</li>
-      <li>Uw-value: <strong>0.77 W/(m²K)</strong> window frames</li>
+      <li>Construction type: Timber / concrete mixed construction</li>
+      <li>Night cooling through cross-ventilation via windows — the building uses cool nighttime air to remove heat stored during the day</li>
+      <li>CAD Program / BIM: Archicad</li>
+      <li>PHPP calculation for certification</li>
+      <li>3D Modeling: Archicad</li>
     </ul>
   </div>
-
-  <p class="tools reveal">CAD Program / BIM: Archicad · PHPP calculation for certification · 3D Modeling: Archicad</p>
 
 </div>
 
