@@ -199,6 +199,7 @@ nav.scrolled { padding: 14px 228px; }
   overflow: hidden;
   margin-bottom: 32px;
   padding: 0 180px;
+  position: relative;
 }
 .project-hero a {
   display: block;
@@ -214,9 +215,58 @@ nav.scrolled { padding: 14px 228px; }
   transform: scale(1.02);
 }
 
-/* Info bar: title + brief + stats on left, number on right */
+/* Hover overlay */
+.project-overlay {
+  position: absolute;
+  bottom: 0; left: 180px; right: 180px;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.92));
+  padding: 60px 32px 32px;
+  transform: translateY(100%);
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+.project-hero:hover .project-overlay {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.project-overlay .overlay-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.project-overlay .brief {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.85);
+  font-weight: 300;
+  margin-bottom: 12px;
+  max-width: 600px;
+}
+.project-overlay .project-stats {
+  margin-bottom: 12px;
+}
+.project-overlay .project-stats .stat {
+  color: rgba(255,255,255,0.7);
+}
+.project-overlay .project-stats .stat strong {
+  color: #fff;
+}
+.project-overlay .read-more {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.project-overlay .read-more:hover {
+  color: rgba(255,255,255,0.8);
+}
+
+/* Info bar: hidden on desktop, shown on mobile */
 .project-info {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
@@ -400,7 +450,8 @@ footer {
   .hero { padding: 120px 20px 80px; }
   .section-head, .about { padding-left: 20px; padding-right: 20px; }
   .project { padding-left: 20px; padding-right: 20px; }
-  .project-info { flex-direction: column-reverse; gap: 12px; padding: 0; }
+  .project-info { display: flex; flex-direction: column-reverse; gap: 12px; padding: 0; }
+  .project-overlay { display: none; }
   .project-number { font-size: 40px; }
   .project-hero { padding: 0; }
   .project-title { padding: 0; }
@@ -454,6 +505,17 @@ footer {
   <h3 class="project-title">Paul-Winter School</h3>
   <div class="project-hero">
     <a href="project-paul-winter-school.html"><img src="images/paul-winter-school/hero.avif" alt="Paul-Winter School exterior"></a>
+    <div class="project-overlay">
+      <div class="overlay-title">Paul-Winter School</div>
+      <p class="brief">Serving 600 middle school students, the campus includes a double gym, outdoor sports areas, a cafeteria, and spaces for after-school programs.</p>
+      <div class="project-stats">
+        <span class="stat"><strong>Type</strong> Educational</span>
+        <span class="stat"><strong>Year</strong> 2015 – 2021</span>
+        <span class="stat"><strong>GFA</strong> 13,293 m²</span>
+        <span class="stat"><strong>Budget</strong> €35.5M</span>
+      </div>
+      <a href="project-paul-winter-school.html" class="read-more">Read more about the project →</a>
+    </div>
   </div>
   <div class="project-info">
     <div class="project-text">
@@ -477,6 +539,18 @@ footer {
   <h3 class="project-title">Villa S</h3>
   <div class="project-hero">
     <a href="project-villa-s.html"><img src="images/villa-s/06.avif" alt="Villa S living space"></a>
+    <div class="project-overlay">
+      <div class="overlay-title">Villa S</div>
+      <p class="brief">A cabin-inspired villa that blends dark materials, open spaces, and strong indoor–outdoor living on the outskirts of Munich.</p>
+      <div class="project-stats">
+        <span class="stat"><strong>Type</strong> Residential</span>
+        <span class="stat"><strong>Location</strong> Munich</span>
+        <span class="stat"><strong>Year</strong> 2017 – 2020</span>
+        <span class="stat"><strong>GFA</strong> 450 m²</span>
+        <span class="stat"><strong>Budget</strong> €2M</span>
+      </div>
+      <a href="project-villa-s.html" class="read-more">Read more about the project →</a>
+    </div>
   </div>
   <div class="project-info">
     <div class="project-text">
@@ -500,6 +574,18 @@ footer {
   <h3 class="project-title">Kindergarten Gröbenzell</h3>
   <div class="project-hero">
     <a href="project-kindergarten-groebenzell.html"><img src="images/kindergarten-groebenzell/hero.avif" alt="Kindergarten Gröbenzell exterior"></a>
+    <div class="project-overlay">
+      <div class="overlay-title">Kindergarten Gröbenzell</div>
+      <p class="brief">A bright, playful childcare center that brings daylight, outdoor play, and community together on a narrow site near Munich.</p>
+      <div class="project-stats">
+        <span class="stat"><strong>Type</strong> Educational</span>
+        <span class="stat"><strong>Location</strong> Gröbenzell</span>
+        <span class="stat"><strong>Year</strong> 2013 – 2015</span>
+        <span class="stat"><strong>GFA</strong> 673 m²</span>
+        <span class="stat"><strong>Budget</strong> €2.7M</span>
+      </div>
+      <a href="project-kindergarten-groebenzell.html" class="read-more">Read more about the project →</a>
+    </div>
   </div>
   <div class="project-info">
     <div class="project-text">
@@ -524,6 +610,17 @@ footer {
   <h3 class="project-title">Multifamily House Erding</h3>
   <div class="project-hero">
     <a href="project-mfh-taferner.html"><img src="images/mfh-taferner/hero.avif" alt="Multifamily House Erding exterior"></a>
+    <div class="project-overlay">
+      <div class="overlay-title">Multifamily House Erding</div>
+      <p class="brief">Communal living in passive house standard designed for seniors and people with disabilities.</p>
+      <div class="project-stats">
+        <span class="stat"><strong>Type</strong> Residential</span>
+        <span class="stat"><strong>Location</strong> Erding</span>
+        <span class="stat"><strong>Year</strong> 2015 – 2017</span>
+        <span class="stat"><strong>GFA</strong> 346 m²</span>
+      </div>
+      <a href="project-mfh-taferner.html" class="read-more">Read more about the project →</a>
+    </div>
   </div>
   <div class="project-info">
     <div class="project-text">
@@ -546,6 +643,18 @@ footer {
   <h3 class="project-title">Revitalization Westend Carrée</h3>
   <div class="project-hero">
     <a href="project-westend-carree.html"><img src="images/westend-carree/hero.avif" alt="Westend Carrée exterior"></a>
+    <div class="project-overlay">
+      <div class="overlay-title">Revitalization Westend Carrée</div>
+      <p class="brief">Sustainability certification, redesigned common areas, and improved outdoor facilities of a prestigious office complex in Frankfurt's Westend.</p>
+      <div class="project-stats">
+        <span class="stat"><strong>Type</strong> Commercial</span>
+        <span class="stat"><strong>Location</strong> Frankfurt</span>
+        <span class="stat"><strong>Year</strong> 2021 – 2022</span>
+        <span class="stat"><strong>GFA</strong> 4,670 m²</span>
+        <span class="stat"><strong>Budget</strong> €13M</span>
+      </div>
+      <a href="project-westend-carree.html" class="read-more">Read more about the project →</a>
+    </div>
   </div>
   <div class="project-info">
     <div class="project-text">
